@@ -38,7 +38,7 @@ jobs:
           ECR_REPOSITORY: nidhin-nodejs-application
           IMAGE_TAG: ${{ steps.time.outputs.date }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:nidhin-nodejs-application-$IMAGE_TAG .
           docker images
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
